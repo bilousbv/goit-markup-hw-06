@@ -18,6 +18,10 @@
   --font-family-secondary: 'Raleway';
 }
 
+* {
+  transition: background .3s ease-in-out, color .3s ease-in-out;
+}
+
 h1,
 h2,
 h3,
@@ -109,12 +113,12 @@ a {
   width: 1px;
   height: 1px;
   margin: -1px;
-  padding: 0;
   border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-  white-space: nowrap;
-  clip-path: inset(50%);
 }
 
 .logo {
@@ -135,7 +139,6 @@ a {
 /* Header */
 .header {
   border-bottom: 1px solid var(--color-accent);
-  padding: 24px 0;
 }
 
 .header .container {
@@ -152,6 +155,10 @@ a {
   display: flex;
   align-items: center;
   gap: 40px;
+}
+
+.header__navigation__list__item {
+  padding: 24px 0;
 }
 
 .header__navigation__list__item__link {
@@ -244,7 +251,7 @@ a {
 }
 
 .pillars__list__item__title {
-  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 /* Team section */
