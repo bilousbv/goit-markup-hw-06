@@ -1,0 +1,14 @@
+{
+  "name": "goit-markup-hw-01",
+  "version": "1.0.0",
+  "description": "GoIT markup homework",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "npx prettier . --write"
+  },
+  "author": "Bohdan Bilous",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
+}
