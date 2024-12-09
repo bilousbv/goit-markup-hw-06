@@ -81,19 +81,14 @@ a {
 }
 
 /* Header */
-
-.header {
-  color: var(--color-dark);
-}
-
-.header__navigation__list__item:hover,
-.header__navigation__list__item:focus {
+.header__navigation__list__item:hover .header__navigation__list__item__link,
+.header__navigation__list__item:focus .header__navigation__list__item__link {
   color: var(--color-pressed-state);
 }
 
 .header__navigation__list__item__link {
   font-weight: 500;
-  color: inherit;
+  color: var(--color-dark);
 }
 
 .header__address {
@@ -153,9 +148,13 @@ a {
 /* Footer */
 .footer {
   background: var(--color-dark);
-  color: var(--color-light);
 }
 
 .footer .logo__regular {
   color: var(--color-light);
 }
+
+.footer__description {
+  color: var(--color-light);
+}
+
