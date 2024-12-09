@@ -81,19 +81,15 @@ a {
 }
 
 /* Header */
-.header {
+.header__navigation__list__item__link {
+  font-weight: 500;
   color: var(--color-dark);
 }
 
-.header__navigation__list__item:hover,
-.header__navigation__list__item:active,
-.header__navigation__list__item:focus {
+.header__navigation__list__item__link:focus,
+.header__navigation__list__item__link:active,
+.header__navigation__list__item__link:hover {
   color: var(--color-pressed-state);
-}
-
-.header__navigation__list__item__link {
-  font-weight: 500;
-  color: inherit;
 }
 
 .header__address {
