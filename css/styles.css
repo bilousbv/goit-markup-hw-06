@@ -40,9 +40,10 @@ h1 {
 h2 {
   font-size: 36px;
   font-weight: 700;
-  line-height: 1.11;
+  line-height: 1.07;
   letter-spacing: 0.02em;
   color: var(--color-dark);
+  text-transform: capitalize;
 }
 
 h3 {
@@ -66,30 +67,34 @@ a {
   transition: color 0.3s ease-in-out;
 }
 
-a:active,
-a:hover {
-  color: var(--color-pressed-state);
-}
-
 .logo {
   font-family: var(--font-family-secondary), sans-serif;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: inherit;
+  color: var(--color-primary-brand);
 }
 
-.logo__accent {
-  color: var(--color-primary-brand);
+.logo__regular {
+  color: var(--color-dark);
 }
 
 /* Header */
 
 .header {
-  padding: 24px 156px;
+  /*padding: 24px 156px;*/
   color: var(--color-dark);
+}
+
+.header__navigation__list__item__link {
+  color: inherit;
+}
+
+.header__navigation__list__item__link:focus,
+.header__navigation__list__item__link:hover {
+  color: var(--color-pressed-state);
 }
 
 .header__navigation__list__item__link {
@@ -97,23 +102,33 @@ a:hover {
   color: inherit;
 }
 
+.header__address {
+  font-style: normal;
+}
+
+
 .header__address__list__item__link {
   color: var(--color-text);
+}
+.header__address__list__item__link:focus,
+.header__address__list__item__link:hover {
+  color: var(--color-pressed-state);
 }
 
 /* Main */
 .main__section {
-  padding: 120px 156px;
+  /*padding: 120px 156px;*/
 }
 
 .main__section__title {
   color: var(--color-dark);
+  text-align: center;
 }
 
 /* Hero section */
 .hero {
   background: var(--color-dark);
-  padding-block: 188px;
+  /*padding-block: 188px;*/
 }
 
 .hero__title {
@@ -121,7 +136,8 @@ a:hover {
 }
 
 .hero__button {
-  padding: 16px 32px;
+  /*padding: 16px 32px;*/
+  font-family: var(--font-family-primary), sans-serif;
   background: var(--color-primary-brand);
   font-size: 16px;
   font-weight: 500;
@@ -130,10 +146,10 @@ a:hover {
   color: var(--color-white);
   cursor: pointer;
   border: none;
-  border-radius: 4px;
+  /*border-radius: 4px;*/
 }
 
-.hero__button:active,
+.hero__button:focus,
 .hero__button:hover {
   background: var(--color-pressed-state);
 }
@@ -150,6 +166,10 @@ a:hover {
 /* Footer */
 .footer {
   background: var(--color-dark);
-  padding: 100px 156px;
+  /*padding: 100px 156px;*/
+  color: var(--color-light);
+}
+
+.footer .logo__regular {
   color: var(--color-white);
 }
