@@ -81,6 +81,10 @@ a {
 }
 
 /* Header */
+.header {
+  color: var(--color-dark);
+}
+
 .header__navigation__list__item:hover,
 .header__navigation__list__item:active,
 .header__navigation__list__item:focus {
