@@ -36,6 +36,10 @@ ol {
   margin: 0;
 }
 
+img {
+  display: block;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -93,14 +97,14 @@ a {
 
 .container {
   max-width: 1158px;
-  padding: 16px;
+  padding: 15px;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.hidden {
+.visually-hidden {
   display: none;
 }
 
@@ -119,8 +123,12 @@ a {
 }
 
 /* Header */
-.header .container {
+.header {
+  border-bottom: 1px solid var(--color-accent);
   padding-block: 24px;
+}
+
+.header .container {
   flex-direction: row;
   justify-content: space-between;
 }
@@ -169,29 +177,30 @@ a {
 }
 
 /* Main */
-.section .container {
-  gap: 72px;
+.section {
   padding-block: 120px;
 }
 
 .section__title {
   color: var(--color-dark);
   text-align: center;
+  margin-bottom: 72px;
 }
 
 /* Hero section */
 .hero {
   background: var(--color-dark);
+  padding-block: 188px;
 }
 
 .hero .container {
-  padding-block: 188px;
   gap: 48px;
 }
 
 .hero__title {
   color: white;
   text-align: center;
+  max-width: 496px;
 }
 
 .hero__button {
@@ -206,6 +215,7 @@ a {
   border: 0;
   border-radius: 4px;
   padding: 16px 32px;
+  min-width: 169px
 }
 
 .hero__button:focus,
@@ -221,9 +231,11 @@ a {
 }
 
 .pillars__list__item {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-basis: calc((100% - 3 * 24px) / 4);
+}
+
+.pillars__list__item__title {
+  margin-top: 8px;
 }
 
 /* Team section */
@@ -245,31 +257,38 @@ a {
 
 .team__list__item__text-box {
   padding: 16px 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px
+}
+
+.team__list__item__text-box__title {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.team__list__item__text-box__description {
+  text-align: center;
 }
 
 /* Portfolio section */
 .portfolio__list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
 }
 
 .portfolio__list__item {
   display: flex;
   flex-direction: column;
+  flex-basis: calc((100% - 2 * 24px) / 3);
 }
 
 .portfolio__list__item__text-box {
   padding: 32px 16px ;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
   border: 1px solid var(--color-card-border);
   border-top: 0;
+}
+
+.portfolio__list__item__text-box__title {
+  margin-top: 8px;
 }
 
 /* Footer */
@@ -280,11 +299,12 @@ a {
 
 .footer .container {
   align-items: start;
-  gap: 16px
 }
 
 .footer .logo__regular {
   color: var(--color-light);
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer__description {
