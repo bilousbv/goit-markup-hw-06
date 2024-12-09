@@ -33,14 +33,14 @@ a {
 h1 {
   font-size: 56px;
   font-weight: 700;
-  line-height: 1.11;
+  line-height: 1.07;
   letter-spacing: 0.02em;
 }
 
 h2 {
   font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--color-dark);
   text-transform: capitalize;
@@ -64,7 +64,6 @@ a {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  transition: color 0.3s ease-in-out;
 }
 
 .logo {
@@ -88,12 +87,8 @@ a {
   color: var(--color-dark);
 }
 
-.header__navigation__list__item__link {
-  color: inherit;
-}
-
-.header__navigation__list__item__link:focus,
-.header__navigation__list__item__link:hover {
+.header__navigation__list__item:focus,
+.header__navigation__list__item:hover {
   color: var(--color-pressed-state);
 }
 
@@ -106,10 +101,10 @@ a {
   font-style: normal;
 }
 
-
 .header__address__list__item__link {
   color: var(--color-text);
 }
+
 .header__address__list__item__link:focus,
 .header__address__list__item__link:hover {
   color: var(--color-pressed-state);
@@ -133,6 +128,7 @@ a {
 
 .hero__title {
   color: white;
+  text-align: center;
 }
 
 .hero__button {
@@ -171,5 +167,5 @@ a {
 }
 
 .footer .logo__regular {
-  color: var(--color-white);
+  color: var(--color-light);
 }
