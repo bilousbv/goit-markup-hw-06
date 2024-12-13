@@ -157,11 +157,8 @@ a {
   gap: 40px;
 }
 
-.header__navigation__list__item {
-  padding: 24px 0;
-}
-
 .header__navigation__list__item__link {
+  padding: 24px 0;
   font-weight: 500;
   color: var(--color-dark);
 }
@@ -317,7 +314,7 @@ a {
   align-items: start;
 }
 
-.footer .logo {
+.footer__logo {
   display: inline-block;
   margin-bottom: 16px;
 }
