@@ -11,8 +11,8 @@
   --color-white: #ffffff;
   --color-modal-overlay: #2e2f4266;
   --color-modal-background: #fcfcfc;
-  --color-card-shadow: #2E2F4214;
-  --color-card-shadow-secondary: #2E2F4214;
+  --color-card-shadow: rgba(46, 47, 66, 0.08);
+  --color-card-shadow-secondary: rgba(46, 47, 66, 0.16);
   --color-card-border: #E7E9FC;
 
   --font-family-primary: 'Roboto';
@@ -257,7 +257,7 @@ button {
 .hero {
   position: relative;
   padding-block: 188px;
-  background-image: linear-gradient(var(--color-hero-background), var(--color-hero-background)), url('../images/hero_bg.png');
+  background-image: linear-gradient(var(--color-hero-background), var(--color-hero-background)), url('../images/hero_bg.jpg');
   background-repeat: no-repeat no-repeat;
   background-position: center;
   background-size: cover;
@@ -457,5 +457,7 @@ button {
   gap: 16px;
 }
 
-
-
+.footer .social-list__item__link:focus,
+.footer .social-list__item__link:hover {
+  background-color: var(--color-success);
+}
