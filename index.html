@@ -60,7 +60,7 @@
             <br />
             for Your Business
           </h1>
-          <button class="hero__button" type="button">Order Service</button>
+          <button class="btn-primary" type="button" data-modal-open>Order Service</button>
         </div>
       </section>
       <section class="section pillars">
@@ -385,9 +385,75 @@
         </div>
       </section>
     </main>
+    <div class="modal-overlay" data-modal>
+      <div class="modal">
+        <button class="modal__close" type="button" data-modal-close>
+          <svg class="modal__close__icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="modal__title">Leave your contacts and we will call you back</h2>
+        <form class="modal__form" name="review">
+          <div class="modal__form__field">
+            <label class="modal__form__label" for="user-name">Name</label>
+            <div class="modal__form__item">
+              <input class="modal__form__item__input" type="text" id="user-name" name="user-name" />
+              <svg class="modal__form__item__icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal__form__field">
+            <label class="modal__form__label" for="user-tel">Phone</label>
+            <div class="modal__form__item">
+              <input class="modal__form__item__input" type="tel" id="user-tel" name="user-tel" />
+              <svg class="modal__form__item__icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal__form__field">
+            <label class="modal__form__label" for="user-email">Email</label>
+            <div class="modal__form__item">
+              <input class="modal__form__item__input" type="email" id="user-email" name="user-email" />
+              <svg class="modal__form__item__icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal__form__field modal__form__comment">
+            <label class="modal__form__label" for="user-comment">Comment</label>
+            <div class="modal__form__item">
+              <textarea
+                class="modal__form__item__input modal__form__item__textarea"
+                name="user-comment"
+                id="user-comment"
+                placeholder="Text input"></textarea>
+            </div>
+          </div>
+
+          <div class="modal__form__item modal__form__agreement">
+            <input class="visually-hidden" type="checkbox" name="user-privacy" id="user-privacy" value="true" />
+            <label class="modal__form__item__checkbox-text" for="user-privacy">
+              <span class="modal__form__item__checkbox">
+                <svg class="modal__form__item__checkbox__icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="modal__link" href="#">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="btn-primary form__button" type="button">Send</button>
+        </form>
+      </div>
+    </div>
     <footer class="footer">
       <div class="container">
-        <div class="footer__column">
+        <div class="footer__text-column">
           <a class="logo" href="./index.html">
             Web
             <span class="logo__regular">Studio</span>
@@ -400,7 +466,7 @@
             marketing & growth solutions.
           </p>
         </div>
-        <div class="footer__column">
+        <div class="footer__social-column">
           <p class="footer__subtitle">Social media</p>
           <ul class="social-list">
             <li class="social-list__item">
@@ -433,7 +499,22 @@
             </li>
           </ul>
         </div>
+        <div class="footer__form-column">
+          <p class="footer__subtitle">Subscribe</p>
+          <form class="footer__form-column__form">
+            <label class="footer__form-column__form__input-label">
+              <input class="footer__form-column__form__input" type="email" name="email" placeholder="E-mail" />
+            </label>
+            <button class="btn-primary footer__form-column__form__button" type="submit">
+              Subscribe
+              <svg class="footer__form-column__form__button__icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
   </body>
+  <script src="./js/modal.js" async></script>
 </html>
