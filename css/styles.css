@@ -439,11 +439,6 @@ button {
   margin-right: 120px
 }
 
-
-.footer__form-column {
-  flex: 1 1 auto;
-}
-
 .footer__subtitle {
   font-weight: 500;
   font-size: 16px;
@@ -468,10 +463,6 @@ button {
   gap: 24px;
 }
 
-.footer__form-column__form__input-label {
-  flex: 1 1 auto;
-}
-
 .footer__form-column__form__input {
   height: 40px;
   border: 1px solid var(--color-white);
@@ -485,7 +476,7 @@ button {
   font-weight: 400;
   line-height: 2;
   letter-spacing: 0.04em;
-  width: 100%;
+  width: 264px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 4px var(--color-footer-input-shadow);
 }
@@ -507,13 +498,13 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   padding: 8px 24px;
   min-width: 165px;
 }
 
 .footer__form-column__form__button__icon {
   fill: var(--color-white);
+  margin-left: 16px;
 }
 
 .modal-overlay {
