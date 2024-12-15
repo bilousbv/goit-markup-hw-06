@@ -735,6 +735,7 @@ input[type='checkbox']:focus-visible+.modal__form__item__checkbox-text .modal__f
   gap: 48px;
   width: 100vw;
   height: 100vh;
+  max-height: 100vh;
 }
 
 .menu .modal__close {
@@ -751,14 +752,18 @@ input[type='checkbox']:focus-visible+.modal__form__item__checkbox-text .modal__f
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .navigation {
+    align-items: flex-start;
+  }
+
   .mobile-hidden__navigation__list,
   .mobile-hidden__address {
     display: none;
   }
 }
 
-@media (max-width: 1158px) {
+@media (max-width: 1157px) {
   .pillars__list__item__header {
     display: none;
   }
