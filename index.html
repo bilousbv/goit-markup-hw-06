@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>GoIT Markup Homework 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
@@ -19,34 +20,37 @@
   <body>
     <header class="header">
       <div class="container">
-        <nav class="header__navigation">
+        <nav class="navigation">
           <a class="logo" href="./index.html">
             Web
             <span class="logo__regular">Studio</span>
           </a>
-          <ul class="header__navigation__list">
-            <li class="header__navigation__list__item">
-              <a
-                class="header__navigation__list__item__link header__navigation__list__item__link__active"
-                href="./index.html">
+          <ul class="navigation__list mobile-hidden__navigation__list">
+            <li class="navigation__list__item">
+              <a class="navigation__list__item__link navigation__list__item__link__active" href="./index.html">
                 Studio
               </a>
             </li>
-            <li class="header__navigation__list__item">
-              <a class="header__navigation__list__item__link" href="#portfolio">Portfolio</a>
+            <li class="navigation__list__item">
+              <a class="navigation__list__item__link" href="#portfolio">Portfolio</a>
             </li>
-            <li class="header__navigation__list__item">
-              <a class="header__navigation__list__item__link" href="">Contacts</a>
+            <li class="navigation__list__item">
+              <a class="navigation__list__item__link" href="">Contacts</a>
             </li>
           </ul>
+          <button class="header__menu__button" data-menu-open>
+            <svg class="header__menu__button__icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </button>
         </nav>
-        <address class="header__address">
-          <ul class="header__address__list">
-            <li class="header__address__list__item">
-              <a class="header__address__list__item__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        <address class="address mobile-hidden__address">
+          <ul class="address__list">
+            <li class="address__list__item">
+              <a class="address__list__item__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
             </li>
-            <li class="header__address__list__item">
-              <a class="header__address__list__item__link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            <li class="address__list__item">
+              <a class="address__list__item__link" href="tel:+110001111111">+11 (000) 111-11-11</a>
             </li>
           </ul>
         </address>
@@ -121,9 +125,9 @@
             <li class="team__list__item">
               <img
                 class="team__list__item__img"
+                srcset="./images/team/mark_guerrero.jpg 1x, ./images/team/mark_guerrero@2x.jpg 2x"
                 src="./images/team/mark_guerrero.jpg"
-                alt="Mark Guerrero"
-                width="264" />
+                alt="Mark Guerrero" />
               <div class="team__list__item__text-box">
                 <h3 class="team__list__item__text-box__title">Mark Guerrero</h3>
                 <p class="team__list__item__text-box__description">Product Designer</p>
@@ -160,7 +164,11 @@
               </div>
             </li>
             <li class="team__list__item">
-              <img class="team__list__item__img" src="./images/team/tom_ford.jpg" alt="Tom Ford" width="264" />
+              <img
+                class="team__list__item__img"
+                srcset="./images/team/tom_ford.jpg 1x, ./images/team/tom_ford@2x.jpg 2x"
+                src="./images/team/tom_ford.jpg"
+                alt="Tom Ford" />
               <div class="team__list__item__text-box">
                 <h3 class="team__list__item__text-box__title">Tom Ford</h3>
                 <p class="team__list__item__text-box__description">Frontend Developer</p>
@@ -199,9 +207,9 @@
             <li class="team__list__item">
               <img
                 class="team__list__item__img"
+                srcset="./images/team/camila_garcia.jpg 1x, ./images/team/camila_garcia@2x.jpg 2x"
                 src="./images/team/camila_garcia.jpg"
-                alt="Camila Garcia"
-                width="264" />
+                alt="Camila Garcia" />
               <div class="team__list__item__text-box">
                 <h3 class="team__list__item__text-box__title">Camila Garcia</h3>
                 <p class="team__list__item__text-box__description">Marketing</p>
@@ -240,9 +248,9 @@
             <li class="team__list__item">
               <img
                 class="team__list__item__img"
+                srcset="./images/team/daniel_wilson.jpg 1x, ./images/team/daniel_wilson@2x.jpg 2x"
                 src="./images/team/daniel_wilson.jpg"
-                alt="Daniel Wilson"
-                width="264" />
+                alt="Daniel Wilson" />
               <div class="team__list__item__text-box">
                 <h3 class="team__list__item__text-box__title">Daniel Wilson</h3>
                 <p class="team__list__item__text-box__description">UI Designer</p>
@@ -289,6 +297,7 @@
               <div class="portfolio__list__item__img-wrapper">
                 <img
                   class="portfolio__list__item__img-wrapper__img"
+                  srcset="./images/portfolio/banking_app.jpg 1x, ./images/portfolio/banking_app@2x.jpg 2x"
                   src="./images/portfolio/banking_app.jpg"
                   alt="Banking App" />
                 <p class="portfolio__list__item__img-wrapper__content">
@@ -305,6 +314,7 @@
               <div class="portfolio__list__item__img-wrapper">
                 <img
                   class="portfolio__list__item__img-wrapper__img"
+                  srcset="./images/portfolio/cashless_payment.jpg 1x, ./images/portfolio/cashless_payment@2x.jpg 2x"
                   src="./images/portfolio/cashless_payment.jpg"
                   alt="Cashless Payment" />
                 <p class="portfolio__list__item__img-wrapper__content">
@@ -321,6 +331,7 @@
               <div class="portfolio__list__item__img-wrapper">
                 <img
                   class="portfolio__list__item__img-wrapper__img"
+                  srcset="./images/portfolio/meditation_app.jpg 1x, ./images/portfolio/meditation_app@2x.jpg 2x"
                   src="./images/portfolio/meditation_app.jpg"
                   alt="Meditation App" />
                 <p class="portfolio__list__item__img-wrapper__content">
@@ -337,6 +348,7 @@
               <div class="portfolio__list__item__img-wrapper">
                 <img
                   class="portfolio__list__item__img-wrapper__img"
+                  srcset="./images/portfolio/taxi_service.jpg 1x, ./images/portfolio/taxi_service@2x.jpg 2x"
                   src="./images/portfolio/taxi_service.jpg"
                   alt="Taxi Service" />
                 <p class="portfolio__list__item__img-wrapper__content">
@@ -353,6 +365,10 @@
               <div class="portfolio__list__item__img-wrapper">
                 <img
                   class="portfolio__list__item__img-wrapper__img"
+                  srcset="
+                    ./images/portfolio/screen_illustrations.jpg    1x,
+                    ./images/portfolio/screen_illustrations@2x.jpg 2x
+                  "
                   src="./images/portfolio/screen_illustrations.jpg"
                   alt="Screen Illustrations" />
                 <p class="portfolio__list__item__img-wrapper__content">
@@ -369,6 +385,7 @@
               <div class="portfolio__list__item__img-wrapper">
                 <img
                   class="portfolio__list__item__img-wrapper__img"
+                  srcset="./images/portfolio/online_courses.jpg 1x, ./images/portfolio/online_courses@2x.jpg 2x"
                   src="./images/portfolio/online_courses.jpg"
                   alt="Online Courses" />
                 <p class="portfolio__list__item__img-wrapper__content">
@@ -449,8 +466,8 @@
         </div>
       </div>
     </footer>
-    <div class="modal-overlay" data-modal>
-      <div class="modal">
+    <div class="modal-overlay" data-modal-overlay>
+      <div class="modal" data-modal>
         <button class="modal__close" type="button" data-modal-close>
           <svg class="modal__close__icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
@@ -511,6 +528,70 @@
           </div>
           <button class="btn-primary form__button" type="button">Send</button>
         </form>
+      </div>
+    </div>
+    <div class="modal-overlay" data-menu>
+      <div class="modal menu">
+        <button class="modal__close" type="button" data-menu-close>
+          <svg class="modal__close__icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__list__item">
+              <a class="navigation__list__item__link navigation__list__item__link__active" href="./index.html">
+                Studio
+              </a>
+            </li>
+            <li class="navigation__list__item">
+              <a class="navigation__list__item__link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="navigation__list__item">
+              <a class="navigation__list__item__link" href="">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <address class="address">
+          <ul class="address__list">
+            <li class="address__list__item">
+              <a class="address__list__item__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+            <li class="address__list__item">
+              <a class="address__list__item__link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            </li>
+          </ul>
+        </address>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a class="social-list__item__link" href="">
+              <svg class="social-list__item__link__icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__item__link" href="">
+              <svg class="social-list__item__link__icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__item__link" href="">
+              <svg class="social-list__item__link__icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__item__link" href="">
+              <svg class="social-list__item__link__icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
     <script src="./js/modal.js" async></script>
